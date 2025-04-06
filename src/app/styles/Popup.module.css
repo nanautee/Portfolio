@@ -1,0 +1,703 @@
+.section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 15rem; /* Large space between main sections */
+}
+
+.leftSide {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+}
+
+.rightSide {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12vw;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  mix-blend-mode: difference;
+  color: white;
+  z-index: 10;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.text span {
+  line-height: 0.9;
+}
+
+.closeButton {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  color: #6b7280;
+  font-size: 1.5rem;
+}
+
+.closeButton:hover {
+  color: #374151;
+}
+
+.infoSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4rem; /* Increased gap between cards */
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.infoCard {
+  width: 45%;
+  background-color: black;
+  border-radius: 2rem;
+  padding: 3rem;
+  color: white;
+  margin: 0; /* Ensure no margin on cards */
+}
+
+.infoCardRight {
+  align-self: flex-end;
+  margin-top: 2rem; /* Added extra space above right card */
+}
+
+.cardTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.cardText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.contactSection {
+  width: 100%;
+  min-height: 60vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.contactCard {
+  width: 70%;
+  background-color: black;
+  border-radius: 2rem;
+  padding: 3rem;
+  color: white;
+  margin: 0 auto; /* Center horizontally without adding vertical space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: block;
+}
+
+.contactText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contactButton {
+  padding: 1rem 2rem;
+  border: 2px solid #333;
+  border-radius: 0.5rem;
+  color: #333;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+.portfolioSection {
+  width: 100%;
+  padding: 4rem 2rem;
+  margin-top: 5rem;
+}
+
+.portfolioContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolioTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.portfolioCard {
+  background-color: black;
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.portfolioImage {
+  width: 100%;
+  height: 600px; /* Increased from 400px */
+  object-fit: cover;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.portfolioContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #333; /* Dark gray text */
+  max-width: 800px;
+}
+
+.portfolioContent h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.portfolioContent p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.sliderButton {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.portfolioDots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.activeDot {
+  background-color: #333;
+}
+
+.portfolioSlider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.portfolioCard {
+  background-color: black; /* Light gray */
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.portfolioImage {
+  width: 100%;
+  height: 600px; /* Increased from 400px */
+  object-fit: cover;
+}
+
+.portfolioContent {
+  padding: 2rem;
+  color: #333; /* Dark gray text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.portfolioContent h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.portfolioContent p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.portfolioItem {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.portfolioItem:hover {
+  transform: scale(1.02);
+}
+
+.portfolioImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.portfolioImage:hover {
+  transform: scale(1.02);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(224, 224, 224, 0.9); /* Semi-transparent gray */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.modalContent {
+  background-color: black; /* Light gray */
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  color: white;
+}
+
+.modalClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modalImage {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modalTitle {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.modalDescription {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.modalLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.modalLink {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #333;
+  border-radius: 0.5rem;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.modalLink:hover {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+.portfolioSlide {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.portfolioImage {
+  width: 100%;
+  object-fit: cover; /* Changed from contain to cover */
+  aspect-ratio: 16/9; /* Maintain aspect ratio */
+  background-color: transparent; /* Removed black background */
+}
+
+.portfolioLinks {
+  width: 70%;
+  background-color: black;
+  border-radius: 2rem;
+  padding: 3rem;
+  margin: 4rem auto 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.portfolioCredit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.creditLink {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.creditLink:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Optimize font loading */
+@font-face {
+  font-display: swap;
+}
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 16vw;
+  }
+
+  .infoSection {
+    gap: 2rem; /* Smaller gap on mobile */
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+
+  .infoCard {
+    width: 100%;
+    margin: 0;
+  }
+
+  .infoCardRight {
+    align-self: center;
+    margin-top: 1rem; /* Less space on mobile */
+  }
+
+  .contactCard {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .portfolioContainer {
+    padding: 0;
+    width: 100%;
+  }
+
+  .portfolioImage {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    width: 100vw;
+    height: auto;
+    min-height: 60vh; /* Increased minimum height */
+    background-color: transparent;
+  }
+
+  .sliderButton {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .portfolioContent {
+    width: 100%;
+  }
+
+  .portfolioSlide {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
+
+  .portfolioSection {
+    padding: 4rem 0; /* Remove horizontal padding */
+    width: 100%;
+  }
+
+  .sliderButton {
+    position: absolute;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 50%;
+  }
+
+  .sliderButton:first-child {
+    left: 0.5rem;
+  }
+
+  .sliderButton:last-child {
+    right: 0.5rem;
+  }
+
+  .modal {
+    padding: 1rem;
+  }
+
+  .modalContent {
+    padding: 1.5rem;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .contactButton {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+
+  .contactButton:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .creditLink {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .creditLink:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .portfolioLinks {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .portfolioSlide {
+    height: 100vh; /* Full viewport height */
+    border-radius: 0; /* Remove border radius */
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove padding */
+  }
+
+  .sliderButton {
+    position: absolute;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
+    border-radius: 50%;
+  }
+
+  .sliderButton:first-child {
+    left: 1rem;
+  }
+
+  .sliderButton:last-child {
+    right: 1rem;
+  }
+
+  .portfolioContainer {
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolioContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .portfolioTitle {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .portfolioSlide {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .portfolioImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .sliderButton {
+    position: absolute;
+    z-index: 10;
+  }
+
+  .sliderButton:first-child {
+    left: 1rem;
+  }
+
+  .sliderButton:last-child {
+    right: 1rem;
+  }
+
+  .infoSection {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .text {
+    font-size: 14vw;
+  }
+
+  .infoCard {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .infoCardRight {
+    align-self: center;
+  }
+
+  .contactCard {
+    width: 80%;
+  }
+
+  .portfolioImage {
+    height: 500px; /* Adjusted for tablet */
+  }
+
+  .portfolioLinks {
+    width: 80%;
+  }
+
+  .portfolioSlide {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .portfolioContainer {
+    max-width: 1200px;
+  }
+}
+
+@media (max-height: 600px) {
+  .section {
+    margin-bottom: 8rem;
+  }
+
+  .infoSection {
+    gap: 1rem;
+  }
+
+  .contactSection {
+    padding: 2rem;
+  }
+}
+
